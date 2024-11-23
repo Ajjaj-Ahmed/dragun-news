@@ -9,12 +9,13 @@ const Navbar = () => {
                 <Link to={'/'}>Home</Link>
                 <Link to={'/'}>Career</Link>
                 <Link to={'/'}>About</Link>
+                <Link to={'/auth/register'}>Register</Link>
             </div>
             <div className="flex gap-3 items-center">
                 <div>
-                    <img src={userPic} alt="" />
+                    <img className="rounded-full" src={userPic} alt="" />
                 </div>
-                <button className="btn rounded-none">Login</button>
+                <Link to={'/auth/login'} className="btn rounded-none">Login</Link>
             </div>
         </div>
     );
