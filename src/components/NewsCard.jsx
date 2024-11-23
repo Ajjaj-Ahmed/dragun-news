@@ -1,9 +1,10 @@
 import React from 'react';
 import { CiSaveDown2, CiShare2 } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 
 const NewsCard = ({ news }) => {
-    const { rating, total_view, title, author, thumbnail_url, details} = news
+    const { rating, total_view, title, author, thumbnail_url, details,_id} = news
     return (
         <div className='space-y-3 my-5 '>
             {/* author details */}
@@ -26,7 +27,7 @@ const NewsCard = ({ news }) => {
             <img className='w-full  h-[250px]' src={thumbnail_url} alt="" />
             <p className='mb-3'>
                 {details.slice(0,300)}
-                <button className='btn btn-outline ml-4'>Read more</button>
+                <Link to={`/news/${_id}`} className='btn btn-outline ml-4'>Read more</Link>
             </p>
             <hr />
             <div className='flex justify-between'>
